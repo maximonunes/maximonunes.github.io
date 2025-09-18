@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Sintra</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      color: darkblue;
+    }
+
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: darkred;
+      font-weight: bold;
+    }
+
+    .fotografias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .fotografias img {
+      width: 120px;
+      height: 80px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .poema p {
+      font-size: 16px;
+      margin: 3px 0;
+    }
+
+    /* Alternar cor de versos com :nth-child */
+    .poema p:nth-child(odd) {
+      color: darkgreen;
+    }
+    .poema p:nth-child(even) {
+      color: darkblue;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sintra</h1>
+
+  <!-- Navegação por âncoras -->
+  <nav>
+    <a href="#fotografias">Fotografias</a>
+    <a href="#video">Vídeo</a>
+    <a href="#poesia">Poesia</a>
+  </nav>
+
+  <h2>Multimedia</h2>
+  <p>Nesta página encontra conteúdos multimédia sobre Sintra.</p>
+
+  <!-- Secção Fotografias -->
+  <section>
+    <h3 id="fotografias">Fotografias</h3>
+    <div class="fotografias">
+      <img src="images/sn1.jpeg" alt="Palácio da Pena">
+      <img src="images/sn2.jpeg" alt="Castelo dos Mouros">
+      <img src="images/sn3.jpeg" alt="Quinta da Regaleira">
+      <img src="images/sn4.jpeg" alt="Palácio Nacional de Sintra">
+      <img src="images/sn5.jpeg" alt="Centro histórico">
+      <img src="images/sn6.jpeg" alt="Palácio de Monserrate">
+      <img src="images/sn7.jpeg" alt="Serra de Sintra">
+      <img src="images/sn8.jpeg" alt="Jardins de Sintra">
+    </div>
+  </section>
+
+  <!-- Secção Vídeo -->
+  <section>
+    <h3 id="video">Vídeo</h3>
+    <p>Veja um vídeo sobre Sintra:</p>
+    <!-- Exemplo de vídeo incorporado do YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4tT7xFvC3jY" 
+            title="Sintra - Vídeo" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <!-- Secção Poesia -->
+  <section>
+    <h3 id="poesia">Poesia</h3>
+    <div class="poema">
+      <p>Entre palácios que tocam o céu,</p>
+      <p>Sintra encanta em cada olhar,</p>
+      <p>Na serra envolta em véu,</p>
+      <p>conta histórias sem parar.</p>
+      <p>Do Pena ao Castelo antigo,</p>
+      <p>mistério e sonho a caminhar,</p>
+      <p>um refúgio sempre amigo,</p>
+      <p>onde o tempo vem descansar.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Portugal, 2025</p>
+  </footer>
+
+</body>
+</html>
