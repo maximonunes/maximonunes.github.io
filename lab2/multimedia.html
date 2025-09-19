@@ -2,106 +2,136 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <title>Sintra</title>
+  <title>Sintra - Multimedia</title>
+  <!-- CSS centralizado (corrigi o caminho, antes apontava para ../images/styles.css que não existe) -->
+  <link rel="stylesheet" href="lab2/images/styles.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
     }
 
-    h2 {
-      color: darkblue;
+    header {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
     }
 
-    nav a {
-      margin-right: 15px;
-      text-decoration: none;
-      color: darkred;
-      font-weight: bold;
-    }
-
-    .fotografias {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    nav {
       margin-top: 10px;
     }
 
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+    }
+
+    h2, h3 {
+      color: #333;
+    }
+
+    .fotografias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
     .fotografias img {
-      width: 120px;
-      height: 80px;
+      width: 100%;
+      height: auto;
       border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    .poema p {
-      font-size: 16px;
-      margin: 3px 0;
-    }
-
-    /* Alternar cor de versos com :nth-child */
-    .poema p:nth-child(odd) {
-      color: darkgreen;
-    }
-    .poema p:nth-child(even) {
-      color: darkblue;
+    .poema {
       font-style: italic;
+      margin-top: 20px;
+      padding: 15px;
+      background: #f0f0f0;
+      border-left: 4px solid #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Sintra</h1>
+  <header>
+    <h1>Sintra</h1>
+    <!-- Menu de navegação -->
+    <nav>
+      <a href="lab2/index.html">Home</a>
+      <a href="lab2/index.html">Multimédia</a>
+      <a href="lab2/info.html">Informações</a>
+      <a href="lab2/local.html">Localização</a>
+    </nav>
+  </header>
 
-  <!-- Navegação por âncoras -->
-  <nav>
-    <a href="#fotografias">Fotografias</a>
-    <a href="#video">Vídeo</a>
-    <a href="#poesia">Poesia</a>
-  </nav>
+  <main>
+    <h2>Multimédia</h2>
+    <p>Nesta página encontra conteúdos multimédia sobre Sintra.</p>
 
-  <h2>Multimedia</h2>
-  <p>Nesta página encontra conteúdos multimédia sobre Sintra.</p>
+    <!-- Secção Fotografias -->
+    <section>
+      <h3 id="fotografias">Fotografias</h3>
+      <div class="fotografias">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pena_Palace_-_Sintra%2C_Portugal_-_July_2019_%2801%29.jpg" alt="Palácio da Pena">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Moors_Castle%2C_Sintra_%28Portugal%29_%2822378471899%29.jpg" alt="Castelo dos Mouros">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Quinta_da_Regaleira_%28Sintra%29_%2833276795241%29.jpg" alt="Quinta da Regaleira">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/National_Palace_of_Sintra%2C_Portugal_-_July_2019.jpg" alt="Palácio Nacional de Sintra">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Sintra%2C_Portugal_-_panoramio_%28100%29.jpg" alt="Centro histórico de Sintra">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/Pal%C3%A1cio_de_Monserrate_%28Sintra%29.jpg" alt="Palácio de Monserrate">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Sintra_Serra.jpg" alt="Serra de Sintra">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Sintra_gardens.jpg" alt="Jardins de Sintra">
+      </div>
+    </section>
 
-  <!-- Secção Fotografias -->
-  <section>
-    <h3 id="fotografias">Fotografias</h3>
-    <div class="fotografias">
-      <img src="images/sn1.jpeg" alt="Palácio da Pena">
-      <img src="images/sn2.jpeg" alt="Castelo dos Mouros">
-      <img src="images/sn3.jpeg" alt="Quinta da Regaleira">
-      <img src="images/sn4.jpeg" alt="Palácio Nacional de Sintra">
-      <img src="images/sn5.jpeg" alt="Centro histórico">
-      <img src="images/sn6.jpeg" alt="Palácio de Monserrate">
-      <img src="images/sn7.jpeg" alt="Serra de Sintra">
-      <img src="images/sn8.jpeg" alt="Jardins de Sintra">
-    </div>
-  </section>
+    <!-- Secção Vídeo -->
+    <section>
+      <h3 id="video">Vídeo</h3>
+      <p>Veja um vídeo sobre Sintra:</p>
+      <iframe style="width:100%; max-width:560px; height:315px;" 
+              src="https://www.youtube.com/embed/4tT7xFvC3jY" 
+              title="Sintra - Vídeo" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </section>
 
-  <!-- Secção Vídeo -->
-  <section>
-    <h3 id="video">Vídeo</h3>
-    <p>Veja um vídeo sobre Sintra:</p>
-    <!-- Exemplo de vídeo incorporado do YouTube -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4tT7xFvC3jY" 
-            title="Sintra - Vídeo" frameborder="0" allowfullscreen></iframe>
-  </section>
-
-  <!-- Secção Poesia -->
-  <section>
-    <h3 id="poesia">Poesia</h3>
-    <div class="poema">
-      <p>Entre palácios que tocam o céu,</p>
-      <p>Sintra encanta em cada olhar,</p>
-      <p>Na serra envolta em véu,</p>
-      <p>conta histórias sem parar.</p>
-      <p>Do Pena ao Castelo antigo,</p>
-      <p>mistério e sonho a caminhar,</p>
-      <p>um refúgio sempre amigo,</p>
-      <p>onde o tempo vem descansar.</p>
-    </div>
-  </section>
+    <!-- Secção Poesia -->
+    <section>
+      <h3 id="poesia">Poesia</h3>
+      <div class="poema">
+        <p>Entre palácios que tocam o céu,</p>
+        <p>Sintra encanta em cada olhar,</p>
+        <p>Na serra envolta em véu,</p>
+        <p>conta histórias sem parar.</p>
+        <p>Do Pena ao Castelo antigo,</p>
+        <p>mistério e sonho a caminhar,</p>
+        <p>um refúgio sempre amigo,</p>
+        <p>onde o tempo vem descansar.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>Portugal, 2025</p>
@@ -109,3 +139,5 @@
 
 </body>
 </html>
+
+
