@@ -1,15 +1,82 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Cidade</title>
-    <!-- link para o arquivo CSS na pasta "images" -->
+    <title>Sintra - A Minha Cidade</title>
     <link rel="stylesheet" href="images/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2em;
+            color: #2c7a4b;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>A minha Cidade</h1>
-        <!-- Menu de navegação -->
+        <h1>Bem-vindo a Sintra</h1>
         <nav>
             <a href="lab2/index.html">Home</a>
             <a href="lab2/info.html">Informações</a>
@@ -19,14 +86,22 @@
     </header>
 
     <main>
-        <h2>Home</h2>
-        <p>A minha cidade é muito linda!!!</p>
+        <h2>Uma cidade mágica 🌿</h2>
+        <p>Sintra é uma cidade encantadora, cheia de história, palácios, jardins e uma natureza incrível. 🌄</p>
+
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1601382096985-bbb3d47e34d3" alt="Palácio da Pena, Sintra">
+            <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Castelo dos Mouros, Sintra">
+            <img src="https://images.unsplash.com/photo-1624888934522-275693596e6e" alt="Palácio Nacional de Sintra">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Floresta de Sintra">
+        </div>
     </main>
 
     <footer>
-        <p>DIW 2025</p>
+        <p>DIW 2025 - Projeto Minha Cidade</p>
     </footer>
 </body>
 </html>
+
 
 
