@@ -3,98 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A minha Cidade</title>
+  <title>Localização - A Minha Cidade</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset básico */
+    * {
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      box-sizing: border-box;
     }
 
-    header {
-      background-color: #333;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      padding: 10px 0;
-      margin: 0;
-      background-color: #333;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    nav a.active {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-    }
-
-    h1, h2 {
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #eef2f7;
       color: #333;
     }
 
+    /* Navegação */
+    nav {
+      background-color: #1a237e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      margin: 5px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #3949ab;
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Main */
+    main {
+      max-width: 900px;
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      color: #1a237e;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    /* Imagem */
     img {
       display: block;
+      width: 100%;
       max-width: 100%;
       margin: 20px auto;
       border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
+    /* Mapa */
     .map-container {
       width: 100%;
       height: 400px;
-      margin-top: 20px;
-      border: 2px solid #333;
+      margin: 20px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
+    /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
-      background: #333;
+      padding: 20px;
+      background: #2c3e50;
       color: white;
-      margin-top: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>A minha Cidade</h1>
+    <h1>Localização - A Minha Cidade</h1>
   </header>
 
   <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="local.html">Localização</a></li>
-      <li><a href="multimedia.html">Multimédia</a></li>
-      <li><a href="info.html">Informação</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="local.html" class="active">Localização</a>
+    <a href="multimedia.html">Multimédia</a>
+    <a href="info.html">Informação</a>
   </nav>
 
   <main>
-    <h2>Home</h2>
-    <p>A minha cidade é muito linda!!!</p>
+    <h2>Sobre a Cidade</h2>
+    <p>Vila Nova de Foz Côa é uma cidade histórica localizada no norte de Portugal, famosa pelo Parque Arqueológico do Vale do Côa, com gravuras rupestres de grande valor histórico e cultural.</p>
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Vila_Nova_de_Foz_Coa%2C_Portugal_%28Unsplash%29.jpg" alt="Vista de Vila Nova de Foz Côa">
 
-    <h2>Localização</h2>
-    <p>Vila Nova de Foz Côa é uma cidade localizada no continente europeu. É conhecida pelo Parque Arqueológico do Vale do Côa, onde se encontram gravuras rupestres, património cultural e natural desta região.</p>
-
+    <h2>Mapa da Cidade</h2>
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.468919404905!2d-7.138!3d41.083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d7d0c9d5f1f%3A0x123456789abcdef!2sVila%20Nova%20de%20Foz%20C%C3%B4a!5e0!3m2!1spt-PT!2spt!4v1694960112345!5m2!1spt-PT!2spt" 
@@ -109,7 +143,7 @@
   </main>
 
   <footer>
-    <p>DIW 2025</p>
+    <p>DIW 2025 - A Minha Cidade</p>
   </footer>
 </body>
 </html>
