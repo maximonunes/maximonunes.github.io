@@ -13,12 +13,14 @@
         }
 
         header {
-    background: url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
+            background-image: url('images/vila.jpeg'); /* Caminho corrigido */
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
 
         header h1 {
             font-size: 3em;
@@ -53,16 +55,20 @@
             color: #2c7a4b;
         }
 
+        /* Galeria de imagens pequenas com alta qualidade */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 15px;
             margin-top: 30px;
+            justify-items: center;
         }
 
         .gallery img {
-            width: 100%;
-            border-radius: 10px;
+            width: 120px;
+            height: 80px;
+            object-fit: cover; /* Mantém a proporção e recorta se necessário */
+            border-radius: 5px;
             box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
         }
 
@@ -78,7 +84,7 @@
 <body>
     <header>
         <h1>Bem-vindo a Sintra</h1>
-        <nav>
+        <nav aria-label="Menu principal">
             <a href="index.html">Home</a>
             <a href="info.html">Informações</a>
             <a href="local.html">Localização</a>
@@ -89,17 +95,16 @@
     <main>
         <h2>Uma cidade mágica 🌿</h2>
         <p>Sintra é uma cidade encantadora, cheia de história, palácios, jardins e uma natureza incrível. 🌄</p>
-<section>
-    <h3>Fotografias</h3>
-    <div class="fotografias">
-        <img src="images/palacioPena.jpeg" alt="Palácio da Pena, Sintra">
-        <img src="images/mouros.jpeg" alt="Castelo dos Mouros, Sintra">
-        <img src="images/centroH.jpg" alt="Centro histórico de Sintra">
-        <img src="images/jardins.jpg" alt="Jardins de Sintra">
-    </div>
-</section>
 
-
+        <section>
+            <h3>Fotografias</h3>
+            <div class="gallery">
+                <img src="images/palacioPena.jpeg" alt="Palácio da Pena, Sintra">
+                <img src="images/mouros.jpeg" alt="Castelo dos Mouros, Sintra">
+                <img src="images/centroH.jpg" alt="Centro histórico de Sintra">
+                <img src="images/jardins.jpg" alt="Jardins de Sintra">
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -107,6 +112,8 @@
     </footer>
 </body>
 </html>
+
+
 
 
 
