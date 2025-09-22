@@ -1,45 +1,54 @@
 body {
-  background-color: #e8f0fe; /* azul claro em vez de cinzento */
+  background-color: #e8f0fe; /* fundo azul claro */
   margin: 0;
   font-family: Arial, sans-serif;
+  color: #333;
 }
 
-/* Header com gradiente azul */
+/* Header com imagem e overlay azul */
 header {
-  background: linear-gradient(to right, #1a237e, #3f51b5);
-  color: white;
+  background-image: url('images/vila.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  position: relative;
+}
+
+header .overlay {
+  background: rgba(26, 35, 126, 0.7); /* overlay azul escuro */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 60px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 20px;
 }
 
 header h1 {
   font-size: 3em;
-  margin: 0;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  margin: 0 0 20px 0;
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
 /* Navegação */
 nav {
-  background-color: #0d47a1; /* azul forte */
-  padding: 12px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  margin-top: 10px;
 }
-
 nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 12px;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 14px;
   border-radius: 6px;
   transition: background 0.3s, transform 0.2s;
 }
-
 nav a:hover,
 nav a.active {
-  background-color: #42a5f5; /* azul claro */
+  background-color: #42a5f5;
   color: #0d47a1;
   transform: translateY(-2px);
 }
@@ -47,17 +56,17 @@ nav a.active {
 /* Main */
 main {
   padding: 40px 20px;
-  text-align: center;
   max-width: 900px;
-  margin: 30px auto;
+  margin: -50px auto 40px auto; /* sobe por cima do header */
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 main h2 {
   font-size: 2em;
-  color: #0d47a1;
+  color: #1a237e;
   margin-bottom: 15px;
 }
 
@@ -65,21 +74,20 @@ main p {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #333;
+  color: #444;
 }
 
 /* Galeria */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  justify-items: center;
   margin-top: 20px;
 }
 
 .gallery img {
-  width: 140px;
-  height: 100px;
+  width: 100%;
+  height: 140px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
@@ -87,7 +95,7 @@ main p {
 }
 
 .gallery img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0,0,0,0.35);
 }
 
@@ -97,7 +105,7 @@ footer {
   color: white;
   text-align: center;
   padding: 18px;
-  margin-top: 40px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
