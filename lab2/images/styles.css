@@ -1,11 +1,11 @@
-body {
-  background-color: #e8f0fe; /* fundo azul claro */
+body { 
+  background-color: #f4f7f2; /* fundo bege esverdeado */
   margin: 0;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
-/* Header com imagem e overlay azul */
+/* Header com imagem e overlay */
 header {
   background-image: url('images/vila.jpeg');
   background-position: center;
@@ -16,7 +16,7 @@ header {
 }
 
 header .overlay {
-  background: rgba(26, 35, 126, 0.7); /* overlay azul escuro */
+  background: rgba(46, 125, 50, 0.8); /* verde-floresta */
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -37,6 +37,7 @@ header h1 {
 nav {
   margin-top: 10px;
 }
+
 nav a {
   color: white;
   margin: 0 12px;
@@ -44,20 +45,24 @@ nav a {
   font-weight: bold;
   padding: 8px 14px;
   border-radius: 6px;
+  background-color: #388e3c; /* verde médio */
   transition: background 0.3s, transform 0.2s;
 }
+
 nav a:hover,
 nav a.active {
-  background-color: #42a5f5;
-  color: #0d47a1;
+  background-color: #43a047; /* verde mais claro ao passar o rato */
+  color: #fff;
   transform: translateY(-2px);
 }
 
 /* Main */
 main {
-  padding: 50px 20px;
+  padding: 40px 20px;
   max-width: 900px;
-  margin: -20px auto 40px auto; /* sobe por cima do header */
+  position: relative;
+  top: -20px; /* sobe ligeiramente sem cortar o título */
+  margin: 0 auto 40px auto;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -66,7 +71,7 @@ main {
 
 main h2 {
   font-size: 2em;
-  color: #1a237e;
+  color: #5d4037; /* castanho-terra */
   margin-bottom: 15px;
 }
 
@@ -101,13 +106,14 @@ main p {
 
 /* Footer */
 footer {
-  background: #1a237e;
+  background: #1b5e20; /* verde escuro */
   color: white;
   text-align: center;
   padding: 18px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
+
 
 
 
