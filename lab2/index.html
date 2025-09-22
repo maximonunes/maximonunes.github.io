@@ -2,111 +2,84 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sintra - A Minha Cidade</title>
+  <link rel="stylesheet" href="images/styles.css">
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #eef2f7;
-      color: #333;
-    }
-
-    /* Header */
+    /* Header moderno com imagem */
     header {
-      background: linear-gradient(to right, #2c3e50, #3498db);
+      background-image: url('images/vila.jpeg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       color: white;
       text-align: center;
-      padding: 40px 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 60px 20px;
+      box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.3);
     }
-
     header h1 {
       font-size: 3em;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     }
 
-    /* Navegação */
+    /* Navegação estilizada */
     nav {
-      background-color: #1a237e;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 15px 0;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      text-align: center;
     }
-
     nav a {
       color: white;
-      margin: 5px 15px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1em;
       padding: 8px 12px;
-      border-radius: 6px;
+      border-radius: 5px;
       transition: background 0.3s, transform 0.2s;
     }
-
-    nav a:hover, nav a.active {
-      background-color: #3949ab;
+    nav a:hover,
+    nav a.active {
+      background-color: #1a237e;
       transform: translateY(-2px);
     }
 
     /* Main */
     main {
+      padding: 40px 20px;
+      text-align: center;
       max-width: 900px;
-      width: 90%;
-      margin: 30px auto;
-      padding: 20px;
+      margin: auto;
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
     }
-
     main h2 {
+      font-size: 2em;
       color: #1a237e;
       margin-bottom: 15px;
-      text-align: center;
     }
-
     main p {
-      line-height: 1.6;
-      margin-bottom: 20px;
       font-size: 1.1em;
-      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
 
-    /* Galeria */
-    section h3 {
-      margin-top: 30px;
-      color: #0d47a1;
-      text-align: center;
-    }
-
+    /* Galeria de imagens pequenas com qualidade */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 15px;
       justify-items: center;
       margin-top: 20px;
     }
-
     .gallery img {
-      width: 150px;
-      height: 100px;
+      width: 120px;
+      height: 80px;
       object-fit: cover;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.3);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .gallery img:hover {
       transform: scale(1.1);
       box-shadow: 0 6px 12px rgba(0,0,0,0.4);
@@ -114,25 +87,26 @@
 
     /* Footer */
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
+      background: #222;
       color: white;
-      margin-top: 30px;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Bem-vindo a Sintra</h1>
+    <nav aria-label="Menu principal">
+      <a href="index.html" class="active">Home</a>
+      <a href="local.html">Localização</a>
+      <a href="multimedia.html">Multimédia</a>
+      <a href="info.html">Informações</a>
+    </nav>
   </header>
-
-  <nav aria-label="Menu principal">
-    <a href="index.html" class="active">Home</a>
-    <a href="local.html">Localização</a>
-    <a href="multimedia.html">Multimédia</a>
-    <a href="info.html">Informações</a>
-  </nav>
 
   <main>
     <h2>Uma cidade mágica 🌿</h2>
@@ -141,10 +115,10 @@
     <section>
       <h3>Fotografias</h3>
       <div class="gallery">
-        <img src="images/pena.webp" alt="Palácio da Pena, Sintra" loading="lazy">
-        <img src="images/mouros.jpeg" alt="Castelo dos Mouros, Sintra" loading="lazy">
-        <img src="images/centroH.jpg" alt="Centro histórico de Sintra" loading="lazy">
-        <img src="images/jardins.jpg" alt="Jardins de Sintra" loading="lazy">
+        <img src="images/pena.webp" alt="Palácio da Pena, Sintra">
+        <img src="images/mouros.jpeg" alt="Castelo dos Mouros, Sintra">
+        <img src="images/centroH.jpg" alt="Centro histórico de Sintra">
+        <img src="images/jardins.jpg" alt="Jardins de Sintra">
       </div>
     </section>
   </main>
@@ -154,9 +128,6 @@
   </footer>
 </body>
 </html>
-
-
-
 
 
 
