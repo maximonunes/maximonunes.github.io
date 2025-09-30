@@ -2,3 +2,187 @@ body {
     
     background-color: #b3b3b3;
 }
+
+
+/* Menu de navegação */
+.menu ul {
+  list-style: none;       /* remove bullets */
+  display: flex;          /* coloca em linha */
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu a {
+  text-decoration: none;  /* remove sublinhado */
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #2ecc71; /* cor de acento no hover */
+}
+
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("images/fundo.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Caixa de conteúdo posicionada sobre a imagem */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000; /* 30% preto */
+  background: rgba(255, 255, 0, 0.6); /* 60% amarelo com transparência */
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* Hierarquia visual */
+.hero-content h1 {
+  font-size: 3rem; /* grande */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem; /* médio */
+  margin-bottom: 30px;
+}
+
+/* Call-to-action */
+.cta {
+  display: inline-block;
+  background: #2ecc71; /* 10% verde acento */
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem; /* pequeno */
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #27ae60;
+}
+
+
+/* Secção Projetos */
+.projetos {
+  background: #fdf6e3; /* tom suave, agradável */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projetos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Botões dos labs */
+.btn-lab {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #2ecc71; /* cor de acento */
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-lab:hover {
+  background: #27ae60;
+}
+
+
+/* Secção Disciplina */
+.disciplina {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* roxo → azul */
+  color: white;
+  padding: 60px 20px;
+}
+
+.disciplina .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.disciplina h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.disciplina p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.disciplina ul {
+  list-style: none;
+  padding: 0;
+}
+
+.disciplina ul li {
+  background: rgba(255, 255, 255, 0.2);
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Link com destaque */
+.disciplina a {
+  color: #ffeb3b; /* amarelo de destaque */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.disciplina a:hover {
+  text-decoration: underline;
+}
+
+/* Imagem */
+.wordcloud img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
