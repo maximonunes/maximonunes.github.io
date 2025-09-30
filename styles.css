@@ -1,29 +1,36 @@
-body {
-    
-    background-color: #b3b3b3;
-}
 
 
 /* Menu de navegação */
+.menu {
+  width: 100%;                     /* ocupa toda a largura */
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364); /* degrade elegante */
+  padding: 15px 0;                 /* espaçamento interno */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* leve sombra para destaque */
+}
+
 .menu ul {
-  list-style: none;       /* remove bullets */
-  display: flex;          /* coloca em linha */
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
+  list-style: none;       
+  display: flex;          
+  justify-content: center; /* centraliza */
+  gap: 40px;               /* mais espaçamento */
   margin: 0;
+  padding: 0;
 }
 
 .menu a {
-  text-decoration: none;  /* remove sublinhado */
-  color: black;
-  font-weight: bold;
-  transition: color 0.3s;
+  text-decoration: none;  
+  color: #ffffff;          /* texto branco para contraste */
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s, transform 0.2s;
 }
 
 .menu a:hover {
-  color: #2ecc71; /* cor de acento no hover */
+  color: #1abc9c;         /* verde moderno no hover */
+  transform: scale(1.05); /* efeito suave */
 }
+
 
 
 /* Hero */
