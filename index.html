@@ -1,66 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>O meu primeiro site</title>
-    <style>
-        body {
-            background-color: #f5ec8c; /* fundo amarelo claro */
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-        }
-
-        a {
-            color: purple;
-        }
-
-        ul {
-            margin-left: 20px;
-        }
-
-        footer {
-            margin-top: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>O meu primeiro site</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>O meu primeiro site</h1>
 
-    <p>Eis a minha primeira página Web</p>
-
-    <p>
-        Na Unidade Curricular de 
-        <a href="https://www.ulusofona.pt/licenciatura/engenharia-informatica/desenvolvimento-de-interfaces-web" target="_blank">
-            Desenvolvimento de Interfaces Web
-        </a> 
-        abordamos as seguintes tecnologias Web 🌐
-    </p>
-
+  <!-- Menu de navegação -->
+  <nav>
     <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#cadeira">Interfaces Web</a></li>
     </ul>
+  </nav>
 
-    <p>Iremos criar soluções criativas!</p>
-    <nav>
+  <!-- Secção Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>O meu primeiro site 🚀</h1>
+      <p>Eis a minha primeira página Web criativa!</p>
+      <a href="#projetos" class="cta">Ver Projetos</a>
+    </div>
+  </section>
+
+  <!-- Secção Projetos -->
+  <section id="projetos" class="projetos">
+    <h2>Os meus Projetos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Projeto 1</h3>
+        <p>Descrição breve do Projeto 1.</p>
+      </div>
+      <div class="card">
+        <h3>Projeto 2</h3>
+        <p>Descrição breve do Projeto 2.</p>
+      </div>
+      <div class="card">
+        <h3>Projeto 3</h3>
+        <p>Descrição breve do Projeto 3.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secção Disciplina -->
+  <section id="cadeira" class="disciplina">
+    <div class="conteudo">
+      <div class="texto">
+        <h2>Interfaces Web</h2>
+        <p>
+          Na Unidade Curricular de 
+          <a href="https://www.ulusofona.pt/licenciatura/engenharia-informatica/desenvolvimento-de-interfaces-web" target="_blank">
+            Desenvolvimento de Interfaces Web
+          </a> 
+          abordamos as seguintes tecnologias Web 🌐
+        </p>
         <ul>
-            <li><a href="lab1/index.html">Lab1</a></li>
-            <li><a href="lab2/index.html">Lab2</a></li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React e Next.js</li>
         </ul>
-    </nav>
+        <p>Iremos criar soluções criativas!</p>
+      </div>
+      <div class="wordcloud">
+        <img src="images/diw.svg" alt="Nuvem de palavras sobre tecnologias Web">
+      </div>
+    </div>
+  </section>
 
-    <img src="images/diw.svg" alt="Nuvem de palavras sobre tecnologias Web" width="250">
+  <!-- Rodapé -->
+  <footer>
+    <p>Universidade Lusófona, 2025</p>
+  </footer>
 
-    <footer>
-        <p>Universidade Lusófona, 2025</p>
-    </footer>
 </body>
 </html>
+
 
 

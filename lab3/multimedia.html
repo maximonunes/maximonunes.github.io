@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimédia - A Minha Cidade</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #eef2f7;
+      color: #333;
+    }
+
+    /* Navegação */
+    nav {
+      background-color: #1a237e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      margin: 5px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #3949ab;
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #2c3e50, #3498db);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    /* Main */
+    main {
+      max-width: 900px;
+      width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    main h2, main h3 {
+      color: #1a237e;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    /* Galeria de imagens */
+    .fotografias {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .fotografias img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .fotografias img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Vídeo */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Poesia */
+    .poema {
+      font-style: italic;
+      margin-top: 20px;
+      padding: 15px 20px;
+      background: #f0f4ff;
+      border-left: 6px solid #1a237e;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2c3e50;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Multimédia - Sintra</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="local.html">Localização</a>
+    <a href="multimedia.html" class="active">Multimédia</a>
+    <a href="info.html">Informações</a>
+  </nav>
+
+  <main>
+    <h2>Multimédia</h2>
+    <p>Explore conteúdos multimédia sobre Sintra: imagens, vídeos e poesia que revelam a magia desta cidade.</p>
+
+    <!-- Galeria de Fotografias -->
+    <section>
+      <h3>Fotografias</h3>
+      <div class="fotografias">
+        <img src="images/pena.webp" alt="Palácio da Pena">
+        <img src="images/mouros.jpeg" alt="Castelo dos Mouros">
+        <img src="images/quintaR.jpg" alt="Quinta da Regaleira">
+        <img src="images/PSintra_.jpg" alt="Palácio Nacional de Sintra">
+        <img src="images/centroH.jpg" alt="Centro histórico de Sintra">
+        <img src="images/palacio_de_monserrate.jpg" alt="Palácio de Monserrate">
+        <img src="images/serradesintra.jpg" alt="Serra de Sintra">
+        <img src="images/jardins.jpg" alt="Jardins de Sintra">
+      </div>
+    </section>
+
+    <!-- Vídeo -->
+    <section>
+      <h3>Vídeo</h3>
+      <p>Veja um vídeo sobre Sintra:</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/watch?v=hK3HX_qy80Q" 
+                title="Sintra - Vídeo" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Poesia -->
+    <section>
+      <h3>Poesia</h3>
+      <div class="poema">
+        <p>Entre palácios que tocam o céu,</p>
+        <p>Sintra encanta em cada olhar,</p>
+        <p>Na serra envolta em véu,</p>
+        <p>conta histórias sem parar.</p>
+        <p>Do Pena ao Castelo antigo,</p>
+        <p>mistério e sonho a caminhar,</p>
+        <p>um refúgio sempre amigo,</p>
+        <p>onde o tempo vem descansar.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>DIW 2025 - A Minha Cidade</p>
+  </footer>
+</body>
+</html>
+
+
+
