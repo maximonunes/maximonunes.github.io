@@ -60,7 +60,7 @@
 
     /* Main */
     main {
-      max-width: 900px;
+      max-width: 1000px;
       width: 90%;
       margin: 30px auto;
       padding: 20px;
@@ -78,7 +78,6 @@
       line-height: 1.6;
       margin-bottom: 20px;
       font-size: 1.1em;
-      text-align: center;
     }
 
     /* Imagem */
@@ -91,14 +90,34 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* Mapa */
+    /* Layout texto + mapa */
+    .layout {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-top: 20px;
+    }
+
+    .texto {
+      flex: 1;
+    }
+
     .map-container {
-      width: 100%;
+      flex: 1;
       height: 400px;
-      margin: 20px 0;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+      .map-container {
+        height: 300px;
+      }
     }
 
     /* Footer */
@@ -125,21 +144,25 @@
 
   <main>
     <h2>Sobre a Cidade</h2>
-    <p>Sintra é uma vila histórica situada nas colinas da Serra de Sintra, famosa pelos seus palácios, jardins e paisagens românticas.
-Classificada como Património Mundial pela UNESCO, combina natureza, arquitetura e história num cenário único em Portugal.</p>
     <img src="images/villa.jpg" alt="Sintra">
 
-    <h2>Mapa da Cidade</h2>
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31551.342594513705!2d-9.4202676!3d38.8008965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193eb8fe2d53a3%3A0x400ebbde490f240!2sSintra!5e0!3m2!1spt-PT!2spt!4v1695234567890!5m2!1spt-PT!2spt" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+    <div class="layout">
+      <div class="texto">
+        <p>Sintra é uma vila histórica situada nas colinas da Serra de Sintra, famosa pelos seus palácios, jardins e paisagens românticas.
+        Classificada como Património Mundial pela UNESCO, combina natureza, arquitetura e história num cenário único em Portugal.</p>
+      </div>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31551.342594513705!2d-9.4202676!3d38.8008965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193eb8fe2d53a3%3A0x400ebbde490f240!2sSintra!5e0!3m2!1spt-PT!2spt!4v1695234567890!5m2!1spt-PT!2spt" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
     </div>
   </main>
 

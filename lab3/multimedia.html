@@ -58,6 +58,26 @@
       text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
     }
 
+    /* Secção destaque - full screen */
+    .destaque {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url("images/5a.jpg") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .destaque h2 {
+      position: absolute;
+      color: white;
+      font-size: 6vw;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      top: 20%;
+      left: 10%;
+    }
+
     /* Main */
     main {
       max-width: 900px;
@@ -82,6 +102,13 @@
     }
 
     /* Galeria de imagens */
+    section.fotografias-section {
+      background-color: #fdf6e3;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
     .fotografias {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -101,6 +128,13 @@
     }
 
     /* Vídeo */
+    section.video-section {
+      background-color: #e8f5e9;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
     .video-container {
       display: flex;
       justify-content: center;
@@ -116,11 +150,17 @@
     }
 
     /* Poesia */
+    section.poesia-section {
+      background-color: #f0f4ff;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
     .poema {
       font-style: italic;
       margin-top: 20px;
       padding: 15px 20px;
-      background: #f0f4ff;
+      background: white;
       border-left: 6px solid #1a237e;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -150,12 +190,17 @@
     <a href="info.html">Informações</a>
   </nav>
 
+  <!-- Secção destaque -->
+  <section class="destaque">
+    <h2>"Sintra, onde a história encontra a magia"</h2>
+  </section>
+
   <main>
     <h2>Multimédia</h2>
     <p>Explore conteúdos multimédia sobre Sintra: imagens, vídeos e poesia que revelam a magia desta cidade.</p>
 
     <!-- Galeria de Fotografias -->
-    <section>
+    <section class="fotografias-section">
       <h3>Fotografias</h3>
       <div class="fotografias">
         <img src="images/pena.webp" alt="Palácio da Pena">
@@ -170,11 +215,11 @@
     </section>
 
     <!-- Vídeo -->
-    <section>
+    <section class="video-section">
       <h3>Vídeo</h3>
       <p>Veja um vídeo sobre Sintra:</p>
       <div class="video-container">
-        <iframe src="https://www.youtube.com/watch?v=hK3HX_qy80Q" 
+        <iframe src="https://www.youtube.com/embed/hK3HX_qy80Q" 
                 title="Sintra - Vídeo" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
@@ -183,7 +228,7 @@
     </section>
 
     <!-- Poesia -->
-    <section>
+    <section class="poesia-section">
       <h3>Poesia</h3>
       <div class="poema">
         <p>Entre palácios que tocam o céu,</p>
