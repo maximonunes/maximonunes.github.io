@@ -126,12 +126,14 @@
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
 }
 
+
 /* Cores diferentes para cada lab */
-.card1 { background: #e63946; }  /* vermelho */
-.card2 { background: #457b9d; }  /* azul */
-.card3 { background: #2a9d8f; }  /* verde água */
-.card4 { background: #6a11cb; } /* roxo */
-.card5 { background: #2575fc; } /* roxo */
+.card1 { background: #e63946; }  /* vermelho vibrante */
+.card2 { background: #1d3557; }  /* azul escuro */
+.card3 { background: #06d6a0; }  /* verde água */
+.card4 { background: #9d4edd; }  /* roxo */
+.card5 { background: #f4a261; }  /* laranja claro */
+
 
 .card h3 {
   margin-bottom: 10px;
