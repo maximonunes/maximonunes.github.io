@@ -153,7 +153,7 @@ window.onload = function() {
     carrinho = JSON.parse(salvo);
   }
   criarProduto();
-  atualizarCarrinho();
+  atualizarCesto();
 };
 
 function criarProduto() {
@@ -199,10 +199,10 @@ function adicionar(i) {
 
 function remover(i) {
   carrinho.splice(i, 1);
-  atualizarCarrinho();
+  atualizarCesto();
 }
 
 document.getElementById("limpar-carrinho").addEventListener("click", () => {
   carrinho = [];
-  atualizarCarrinho();
+  atualizarCesto();
 });
