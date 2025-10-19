@@ -206,3 +206,5 @@ document.getElementById("limpar-carrinho").addEventListener("click", () => {
   carrinho = [];
   atualizarCesto();
 });
+
+/* java script */
