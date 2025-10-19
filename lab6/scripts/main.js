@@ -162,13 +162,23 @@ function criarProduto() {
   produtos.forEach((produto, i) => {
     const art = document.createElement("article");
     art.innerHTML = `
-      <img src="${produto.img}" alt="${produto.nome}">
-      <h3>${produto.nome}</h3>
-      <p>Custo total: ${produto.preco.toFixed(2)} €</p>
+      <img src="${produto.image}" alt="${produto.title}">
+      <h3>${produto.title}</h3>
+      <p>Preço: ${produto.price.toFixed(2)} €</p>
       <button onclick="adicionar(${i})">+ Adicionar ao Cesto</button>
     `;
     secProdutos.appendChild(art);
   });
+}
+
+function adicionar(i) {
+  carrinho.push(produtos[i]);
+  atualizarCesto();
+}
+
+function remover(i) {
+  carrinho.splice(i, 1);
+  atualizarCesto();
 }
 
 function atualizarCesto() {
@@ -179,32 +189,20 @@ function atualizarCesto() {
   carrinho.forEach((item, i) => {
     const art = document.createElement("article");
     art.innerHTML = `
-      <img src="${item.img}" alt="${item.nome}">
-      <h3>${item.nome}</h3>
-      <p>Custo total: ${item.preco.toFixed(2)} €</p>
+      <img src="${item.image}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <p>Preço: ${item.price.toFixed(2)} €</p>
       <button onclick="remover(${i})">- Remover do Cesto</button>
     `;
     sec.appendChild(art);
-    total += item.preco;
+    total += item.price;
   });
 
   document.querySelector(".total").textContent = `Custo total: ${total.toFixed(2)} €`;
   localStorage.setItem("carrinhoLoja", JSON.stringify(carrinho));
 }
 
-function adicionar(i) {
-  carrinho.push(produtos[i]);
-  atualizarCarrinho();
-}
-
-function remover(i) {
-  carrinho.splice(i, 1);
-  atualizarCesto();
-}
-
 document.getElementById("limpar-carrinho").addEventListener("click", () => {
   carrinho = [];
   atualizarCesto();
 });
-
-/* java script */
